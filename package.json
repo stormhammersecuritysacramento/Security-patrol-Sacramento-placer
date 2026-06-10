@@ -1,0 +1,9 @@
+{
+  "name": "stormhammer-security",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "latest",
+    "ejs": "latest"
+  }
+}
