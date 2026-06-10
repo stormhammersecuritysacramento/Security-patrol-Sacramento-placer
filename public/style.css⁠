@@ -1,0 +1,14 @@
+header {
+    background-color: #000;
+    color: #ffcc00;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #ffcc00;
+}
+button {
+    background-color: #ff0000;
+    color: white;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
