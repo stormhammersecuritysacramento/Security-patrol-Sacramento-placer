@@ -1,0 +1,20 @@
+const express = require('express');
+const app = express();
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.render('index', { quote: null });
+});
+
+app.post('/calculate', (req, res) => {
+    const { type, loops, hours, threat } = req.body;
+    let base = type === 'patrol' ? 350 : 210; // Simple base math
+    let total = base * (loops || 1);
+    if(threat === 'crisis') total *= 1.15;
+    
+    res.render('index', { quote: { total: total.toFixed(2), details: req.body } });
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
