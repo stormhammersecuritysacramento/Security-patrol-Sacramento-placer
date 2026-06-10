@@ -1,0 +1,11 @@
+<!-- Inside views/index.ejs, update your calculator form to look like this: -->
+<form action="/calculate" method="POST">
+    <!-- Keep your existing inputs here -->
+    <button type="submit">COMPUTE MY CHOSEN PRICE ESTIMATE</button>
+</form>
+
+<% if (quote) { %>
+    <div id="result">
+        <h2>ESTIMATE: $<%= quote.total %></h2>
+    </div>
+<% } %>
